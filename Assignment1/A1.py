@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import Assignment1.functions as funcs
+import Utils.functions as funcs
 
 d = 3072
 K = 10
@@ -21,7 +21,8 @@ def unpackBatch(fileName):
 
 
 def unpackData():
-    fileNames = ["data_batch_1", "data_batch_2", "data_batch_3", "data_batch_4", "data_batch_5"]
+    # fileNames = ["data_batch_1", "data_batch_2", "data_batch_3", "data_batch_4", "data_batch_5"]
+    fileNames = ["data_batch_1"]
 
     trainX = []
     trainY = []
@@ -62,6 +63,8 @@ def evaluateClassifier(X, W, b):
 
 
 def computeCost(X, Y, W, b, lam):
+    W = W[0]
+    b = b[0]
     numDataPoints = X.shape[1]
     P = evaluateClassifier(X, W, b)
     loss = -np.sum(np.log(np.sum(Y * P, axis=0)))
@@ -92,10 +95,12 @@ def computeGradients(X, Y, P, W, lam):
     return gradW, gradB
 
 
-def gradDiff(X, Y, P, W, lam, b):
+def gradDiff(X, Y, W, lam, b):
+    P = forward(X, W, b)
     gradW, gradB = computeGradients(X, Y, P, W, lam)
 
-    numGradW, numGradB = funcs.ComputeGradsNumSlow(X, Y, P, W, b, lam, 1e-6, computeCost)
+    # numGradW, numGradB = funcs.ComputeGradsNum(X, Y, [W], [b], lam, 1e-6, computeCost, 1)
+    numGradW, numGradB = funcs.num_grads(X, Y, [W], [b], lam, 1e-6, computeCost, 1)
     diffW = np.abs(gradW - numGradW)
     diffB = np.abs(gradB - numGradB)
     print(np.max(diffW))
@@ -171,23 +176,23 @@ def plotLearningCurves(history):
 
 def run():
     trainX, trainY, testX, testY = unpackData()
-    X = trainX
-    Y = trainY
+    X = trainX[:, :1]
+    Y = trainY[:, :1]
 
     W = np.random.normal(0, 0.01, (K, d))
     b = np.random.normal(0, 0.01, (K, 1))
 
-    acc = computeAccuracy(testX, testY, W, b)
-    print("Accuracy:", acc)
+    # acc = computeAccuracy(testX, testY, W, b)
+    # print("Accuracy:", acc)
     lam = 0
 
-    # gradDiff(X, Y, P, W, lam, b)
-    params = (100, 0.1, 40)
-    W, b, history = miniBatchGD(X, Y, params, W, b, lam, testX, testY)
+    gradDiff(X, Y, W, lam, b)
+    # params = (100, 0.1, 40)
+    # W, b, history = miniBatchGD(X, Y, params, W, b, lam, testX, testY)
 
-    print("Final Test Accuracy:", computeAccuracy(testX, testY, W, b))
-    plotLearningCurves(history)
-    funcs.montage(W)
+    # print("Final Test Accuracy:", computeAccuracy(testX, testY, W, b))
+    # lotLearningCurves(history)
+    # funcs.montage(W)
 
 
 if __name__ == '__main__':

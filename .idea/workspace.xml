@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5cf1c38-ddc6-4c93-a65b-8c92f3520a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assignment2/A2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Joeyeyey.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Joeyeyey.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment3/A3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment3/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/A1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/A1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2/A2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2/A2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/functions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,33 +19,34 @@
     <session id="-1175617575">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
-          <entry key="py" value="8" />
+          <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="8" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="22" />
-          <entry key="py" value="9140" />
+          <entry key="py" value="9768" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="Python" value="9140" />
+          <entry key="Python" value="9768" />
         </counts>
       </usages-collector>
     </session>
@@ -56,27 +56,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/A1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="35" selection-end-column="31" />
+            <state relative-caret-position="408">
+              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1588815869374" expanded="true" signature="128:399" ph="..." />
-                <marker date="1588815869374" expanded="true" signature="1229:1279" ph="..." />
-                <marker date="1588815869374" expanded="true" signature="1311:1342" ph="..." />
+                <marker date="1589066716093" expanded="true" signature="99:102" ph="..." />
+                <marker date="1589066716093" expanded="true" signature="944:994" ph="..." />
+                <marker date="1589066716093" expanded="true" signature="1026:1057" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment2/A2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="111" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1589067251766" expanded="true" signature="2011:2201" ph="..." />
+                <marker date="1589067251766" expanded="true" signature="7206:7209" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assignment2/A2.py">
+        <entry file="file://$PROJECT_DIR$/Assignment3/A3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7306">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="614">
+              <caret line="113" column="15" lean-forward="true" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1588960698626" expanded="true" signature="2296:2486" ph="..." />
-                <marker date="1588960698626" expanded="true" signature="7491:7494" ph="..." />
               </folding>
             </state>
           </provider>
@@ -85,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="379">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -116,18 +128,19 @@
       <list>
         <option value="$PROJECT_DIR$/Assignment1/functions.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Assignment1/A1.py" />
         <option value="$PROJECT_DIR$/Assignment2/test.py" />
         <option value="$PROJECT_DIR$/Utils/functions.py" />
+        <option value="$PROJECT_DIR$/Assignment1/A1.py" />
         <option value="$PROJECT_DIR$/Assignment2/A2.py" />
+        <option value="$PROJECT_DIR$/Assignment3/A3.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="305" />
-    <option name="y" value="-28" />
-    <option name="width" value="1800" />
-    <option name="height" value="975" />
+    <option name="x" value="244" />
+    <option name="y" value="-22" />
+    <option name="width" value="1440" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -151,6 +164,11 @@
               <item name="DeepLearning-DD2424" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepLearning-DD2424" type="462c0819:PsiDirectoryNode" />
               <item name="Assignment2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DeepLearning-DD2424" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepLearning-DD2424" type="462c0819:PsiDirectoryNode" />
+              <item name="Assignment3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DeepLearning-DD2424" type="b2602c69:ProjectViewProjectNode" />
@@ -279,15 +297,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11901235" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09495666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3222558" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24960998" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,32 +333,42 @@
     <entry file="file://$PROJECT_DIR$/Assignment2/test.py" />
     <entry file="file://$PROJECT_DIR$/Assignment1/A1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="35" selection-end-column="31" />
+        <state relative-caret-position="408">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1588815869374" expanded="true" signature="128:399" ph="..." />
-            <marker date="1588815869374" expanded="true" signature="1229:1279" ph="..." />
-            <marker date="1588815869374" expanded="true" signature="1311:1342" ph="..." />
+            <marker date="1589066716093" expanded="true" signature="99:102" ph="..." />
+            <marker date="1589066716093" expanded="true" signature="944:994" ph="..." />
+            <marker date="1589066716093" expanded="true" signature="1026:1057" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="379">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment2/A2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7306">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="186">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="111" selection-end-column="45" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1588960698626" expanded="true" signature="2296:2486" ph="..." />
-            <marker date="1588960698626" expanded="true" signature="7491:7494" ph="..." />
+            <marker date="1589067251766" expanded="true" signature="2011:2201" ph="..." />
+            <marker date="1589067251766" expanded="true" signature="7206:7209" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment3/A3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="113" column="15" lean-forward="true" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

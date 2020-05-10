@@ -15,6 +15,20 @@ def loadBatch(filename):
     return dictionary
 
 
+def unpackBatch(fileName):
+    batchDict = loadBatch(fileName)
+    data = batchDict[b'data']
+    labels = batchDict[b'labels']
+
+    oneHot = []
+    for i in range(len(labels)):
+        el = np.zeros(10)
+        el[labels[i]] = 1
+        oneHot.append(el)
+
+    return data.tolist(), oneHot
+
+
 def computeGradsNum(X, Y, W, b, lam, h, cost, K):
     dW = [np.zeros(w.shape) for w in W]
     db = [np.zeros(bi.shape) for bi in b]

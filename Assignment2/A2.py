@@ -16,20 +16,6 @@ ETA_MAX = 1e-1
 N_S = 2 * np.floor(N / BATCH_SIZE)
 
 
-def unpackBatch(fileName):
-    batchDict = funcs.loadBatch(fileName)
-    data = batchDict[b'data']
-    labels = batchDict[b'labels']
-
-    oneHot = []
-    for i in range(len(labels)):
-        el = np.zeros(10)
-        el[labels[i]] = 1
-        oneHot.append(el)
-
-    return data.tolist(), oneHot
-
-
 def unpackData():
     fileNames = ["data_batch_1", "data_batch_2", "data_batch_3", "data_batch_4", "data_batch_5"]
 
@@ -37,7 +23,7 @@ def unpackData():
     trainY = []
 
     for fn in fileNames:
-        batchX, batchY = unpackBatch(fn)
+        batchX, batchY = funcs.unpackBatch(fn)
         trainX += batchX
         trainY += batchY
 
@@ -57,7 +43,7 @@ def unpackData():
     # valX, valY = unpackBatch("data_batch_2")
     # valX = np.array(valX).T
     # valY = np.array(valY).T
-    testX, testY = unpackBatch("test_batch")
+    testX, testY = funcs.unpackBatch("test_batch")
     testX = np.array(testX).T
     testY = np.array(testY).T
 

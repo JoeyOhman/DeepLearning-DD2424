@@ -29,32 +29,60 @@ def unpackBatch(fileName):
     return data.tolist(), oneHot
 
 
-def computeGradsNum(X, Y, W, b, lam, h, cost, K):
+def computeGradsNum(X, Y, W, b, lam, h, cost, K, gamma=None, beta=None):
     dW = [np.zeros(w.shape) for w in W]
     db = [np.zeros(bi.shape) for bi in b]
+    if gamma is not None:
+        dGamma = [np.zeros(gi.shape) for gi in gamma]
+        dBeta = [np.zeros(bi.shape) for bi in beta]
+    else:
+        dGamma = None
+        dBeta = None
 
     for k in range(K):
         for i in range(b[k].shape[0]):
+            # b
             b_try = [bi.copy() for bi in b]
             b_try[k][i] -= h
-            c1 = cost(X, Y, W, b_try, lam)
+            c1 = cost(X, Y, W, b_try, lam, gamma, beta)
 
             b_try = [bi.copy() for bi in b]
             b_try[k][i] += h
-            c2 = cost(X, Y, W, b_try, lam)
+            c2 = cost(X, Y, W, b_try, lam, gamma, beta)
             db[k][i] = (c2 - c1) / (2 * h)
+
+            if gamma is not None and k < K-1:
+                # gamma
+                g_try = [gi.copy() for gi in gamma]
+                g_try[k][i] -= h
+                c1 = cost(X, Y, W, b, lam, g_try, beta)
+
+                g_try = [gi.copy() for gi in gamma]
+                g_try[k][i] += h
+                c2 = cost(X, Y, W, b, lam, g_try, beta)
+                dGamma[k][i] = (c2 - c1) / (2 * h)
+
+                # beta
+                beta_try = [bi.copy() for bi in beta]
+                beta_try[k][i] -= h
+                c1 = cost(X, Y, W, b, lam, gamma, beta_try)
+
+                beta_try = [bi.copy() for bi in beta]
+                beta_try[k][i] += h
+                c2 = cost(X, Y, W, b, lam, gamma, beta_try)
+                dBeta[k][i] = (c2 - c1) / (2 * h)
 
             for j in range(W[k].shape[1]):
                 W_try = [w.copy() for w in W]
                 W_try[k][i, j] -= h
-                c1 = cost(X, Y, W_try, b, lam)
+                c1 = cost(X, Y, W_try, b, lam, gamma, beta)
 
                 W_try = [w.copy() for w in W]
                 W_try[k][i, j] += h
-                c2 = cost(X, Y, W_try, b, lam)
+                c2 = cost(X, Y, W_try, b, lam, gamma, beta)
                 dW[k][i, j] = (c2 - c1) / (2 * h)
 
-    return dW, db
+    return dW, db, dGamma, dBeta
 
 
 def ComputeGradsNum(X, Y, W, b, lamda, h, computeCost, K):
@@ -176,4 +204,37 @@ def montage(W):
                     C.append(computeCost(X, Y, W_try, b, lam))
                 dW[k][i, j] = (C[-1] - C[0]) / (2 * h)
     return dW, db
+    
+    
+    
+    
+    
+    
+    
+    
+    def gradDiff(X, Y, W, lam, b, numLayers):
+    H = forward(X, W, b)
+    gradW, gradB = computeGradients(H, Y, W, lam)
+
+    numGradW, numGradB = funcs.computeGradsNum(X, Y, W, b, lam, 1e-5, computeCost, numLayers)
+
+    maxDiffW = 0
+    maxDiffB = 0
+    for k in range(numLayers):
+        diffW = np.max(np.abs(gradW[k] - numGradW[k]))
+        diffB = np.max(np.abs(gradB[k] - numGradB[k]))
+        maxDiffW = max(diffW, maxDiffW)
+        maxDiffB = max(diffB, maxDiffB)
+
+    print(maxDiffW)
+    print(maxDiffB)
+    if maxDiffW < 1e-6:
+        print("Gradient W correct!")
+    else:
+        print("Gradient W incorrect!")
+
+    if maxDiffB < 1e-6:
+        print("Gradient b correct!")
+    else:
+        print("Gradient b incorrect!")
     '''

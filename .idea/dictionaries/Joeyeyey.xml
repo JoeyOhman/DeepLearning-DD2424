@@ -4,6 +4,9 @@
       <w>accs</w>
       <w>avgs</w>
       <w>datapoint</w>
+      <w>diag</w>
+      <w>forw</w>
+      <w>idxs</w>
       <w>softmax</w>
     </words>
   </dictionary>
